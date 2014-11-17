@@ -1,0 +1,25 @@
+<h1>Results</h1>
+
+<h2>Events</h2>
+
+<h2>Team Points</h2>
+<div class="team-points">
+  <% @team_points.each do |tp| %>
+    <div class="team-points-detail">
+      <span class="team-points-region"><%= tp['region'] %></span>
+      <span class="team-points-points"><%= tp['points'] %></span>
+    </div>
+  <% end %>
+</div>
+
+<h2>Top Competitors</h2>
+<div class="top-competitors">
+  <% @top_competitors.each do |tc| %>
+    <div class="team-points">
+      <span class="top-competitors-competitor"><%= tc['competitor'] %></span>
+      <span class="top-competitor-age-group"><%= tc['age_group'] %></span>
+      <span class="top-competitor-sex"><%= tc['sex'] %></span>
+      <span class="top-competitor-points"><%= tc['tot_points'] %></span>
+    </div>
+  <% end %>
+</div>

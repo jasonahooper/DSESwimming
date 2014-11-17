@@ -20,6 +20,7 @@ namespace :result do
       CSV.read(dir + '/' + file, { :col_sep => "\t" }).each do |line|
         if first
           event_id = line.first.split[1].to_i
+          Result.where(:event_id == event_id).destroy_all
           sex = (line.first.split[2] == 'Mens' && 'm') || 'f'
           desc = line.first
           first = false

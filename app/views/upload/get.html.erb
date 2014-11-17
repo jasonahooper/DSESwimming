@@ -1,0 +1,5 @@
+<h1>Upload a file:</h1>
+<%= form_tag({action: :post}, multipart: true) do %>
+  <%= file_field_tag 'results' %>
+  <%= submit_tag 'submit' %>
+<% end %>

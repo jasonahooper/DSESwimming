@@ -4,6 +4,6 @@ class UploadController < ApplicationController
 
   def post
     uploaded_io = params[:results]
-    process_file(uploaded_io.original_filename)
+    process_file(uploaded_io.tempfile)
   end
 end
